@@ -16,10 +16,35 @@ public class gradebook {
 		String name = in.nextLine();
 		System.out.println("Welcome "+name+" to the grade book");
 		System.out.println("Enter grades (1-100). Enter - 1 to stop");
-		int n = in.nextInt();
-		while (n!=-1){
+		int n = 0;
+		double total = 0;
+		int count = 0;
+		int highest = 0;
+		int lowest = 100;
+		while (n<=100){
+			System.out.println("Enter a grade");
+			n = in.nextInt();
+		if (n>=0) {
+			total = total + n;
+			count++;
+			
+			if (n > highest) {
+				highest = n;
+			}
+			if (n<lowest) {
+				lowest = n;
+			}
+		}
+		if (n == -1) {
+			double avg = total /count;
+			System.out.println("The highest grade: "+highest );
+			System.out.println("The lowest grade: "+lowest );
+			System.out.println("The avg of grades: "+ avg);
+			break;
 			
 		}
+		
 	}
 
+}
 }
