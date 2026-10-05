@@ -19,8 +19,8 @@ public class gradebook {
 		int n = 0;
 		double total = 0;
 		int count = 0;
-		int highest = 0;
-		int lowest = 100;
+		double highest = 0;
+		double lowest = 100;
 		while (n<=100){
 			System.out.println("Enter a grade");
 			n = in.nextInt();
@@ -35,7 +35,7 @@ public class gradebook {
 				lowest = n;
 			}
 		}
-		if (n == -1) {
+		if (n <= -1) {
 			double avg = total /count;
 			System.out.println("The highest grade: "+highest );
 			System.out.println("The lowest grade: "+lowest );
